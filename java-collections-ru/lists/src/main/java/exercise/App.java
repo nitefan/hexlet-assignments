@@ -20,9 +20,11 @@ public class App {
         for (var r : wordList) {
             if (charList.contains(r)) {
                 charList.remove(r);
+            } else {
+                return false;
             }
         }
-        return charList.isEmpty();
+        return true;
     }
 }
 
