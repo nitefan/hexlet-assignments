@@ -15,11 +15,9 @@ public class App {
             wordList.add(w);
         }
         for (char c : charArr) {
-            if (wordList.contains(c)){
-                charList.add(c);
-            }
+            charList.add(c);
         }
-        for (char r : wordList) {
+        for (var r : wordList) {
             if (charList.contains(r)) {
                 charList.remove(r);
             }
