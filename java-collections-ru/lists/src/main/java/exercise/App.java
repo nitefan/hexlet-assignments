@@ -1,6 +1,5 @@
 package exercise;
 
-import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,20 +12,19 @@ public class App {
         char[] wordArr = wordToLow.toCharArray();
         List<Character> charList = new ArrayList<>();
         List<Character> wordList = new ArrayList<>();
+        List<Character> testList = new ArrayList<>();
         for (char c : charArr) {
             charList.add(c);
         }
         for (char w : wordArr) {
             wordList.add(w);
         }
-        int charCounter = 0;
         for (var i = 0; i < wordArr.length - 1; i++) {
-            if (wordList.contains(charList.get(i))) {
-                charList.remove(i);
-                charCounter = charCounter + 1;
+            if (charList.contains(wordList.get(i))) {
+                testList.add((char) i);
             }
         }
-        return charCounter == wordArr.length;
+        return wordList == testList;
     }
 }
 
