@@ -20,7 +20,7 @@ public class App {
             wordList.add(w);
         }
         int charCounter = 0;
-        for (var i = 0; i < wordArr.length; i++) {
+        for (var i = 0; i < wordArr.length - 1; i++) {
             if (wordList.contains(charList.get(i))) {
                 charList.remove(i);
                 charCounter = charCounter + 1;
