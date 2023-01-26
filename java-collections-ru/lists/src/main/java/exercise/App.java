@@ -11,19 +11,20 @@ public class App {
         char[] wordArr = wordToLow.toCharArray();
         List<Character> charList = new ArrayList<>();
         List<Character> wordList = new ArrayList<>();
-        List<Character> testList = new ArrayList<>();
-        for (char c : charArr) {
-            charList.add(c);
-        }
         for (char w : wordArr) {
             wordList.add(w);
         }
-        for (var i = 0; i < wordArr.length - 1; i++) {
-            if (charList.contains(wordList.get(i))) {
-                testList.add((char) i);
+        for (char c : charArr) {
+            if (wordList.contains(c)){
+                charList.add(c);
             }
         }
-        return wordList.size() == testList.size();
+        for (char r : wordList) {
+            if (charList.contains(r)) {
+                charList.remove(r);
+            }
+        }
+        return charList.isEmpty();
     }
 }
 
