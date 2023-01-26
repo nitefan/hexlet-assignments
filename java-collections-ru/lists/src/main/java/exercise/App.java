@@ -1,5 +1,4 @@
 package exercise;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +23,7 @@ public class App {
                 testList.add((char) i);
             }
         }
-        return wordList == testList;
+        return wordList.size() == testList.size();
     }
 }
 
