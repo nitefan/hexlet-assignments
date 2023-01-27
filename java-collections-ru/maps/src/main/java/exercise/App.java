@@ -22,7 +22,7 @@ class App {
         }
         return wordsCount;
     }
-    public static String toString(Map wordsCount) {
+    public static String toString(Map<String, Integer> wordsCount) {
         if (wordsCount.size() == 0) {
             return "{}";
         }
