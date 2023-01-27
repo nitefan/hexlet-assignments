@@ -3,8 +3,6 @@ package exercise;
 import java.util.HashMap;
 import java.util.Map;
 
-import static java.util.HashMap.*;
-
 // BEGIN
 class App {
     public static Map getWordCount(String sentence) {
@@ -28,7 +26,7 @@ class App {
         }
         String result = "{\n";
         for (Map.Entry<String, Integer> wordsToDisplay : wordsCount.entrySet()) {
-            result = result + " " + wordsToDisplay.getKey() + ":" + wordsToDisplay.getValue() + "\n";
+            result = result + " " + " " + wordsToDisplay.getKey() + ":" + wordsToDisplay.getValue() + "\n";
         }
         result = result + "}";
         return result;
