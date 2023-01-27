@@ -26,7 +26,7 @@ class App {
         }
         String result = "{\n";
         for (Map.Entry<String, Integer> wordsToDisplay : wordsCount.entrySet()) {
-            result = result + " " + " " + wordsToDisplay.getKey() + ":" + wordsToDisplay.getValue() + "\n";
+            result = result + "  " + wordsToDisplay.getKey() + ": " + wordsToDisplay.getValue() + "\n";
         }
         result = result + "}";
         return result;
