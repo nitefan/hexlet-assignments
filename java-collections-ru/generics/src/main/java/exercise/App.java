@@ -6,16 +6,11 @@ import java.util.ArrayList;
 
 // BEGIN
 public class App {
-    public static List<Map<String, String>> findWhere(List<Map<String, String>> booksList, Map keyList) {
+    public static List<Map<String, String>> findWhere(List<Map<String, String>> booksList,
+                                                      Map<String, String> keyList) {
         List<Map<String, String>> booksFound = new ArrayList<>();
         for (Map book : booksList) {
-            boolean isFound;
-            for (Object key : keyList.keySet()) {
-                if (!booksList.containsValue(keyList.get(key))) {
-                    isFound = false;
-                }
-            }
-            if (isFound) {
+            if (book.entrySet().containsAll(keyList.entrySet())) {
                 booksFound.add(book);
             }
         }
